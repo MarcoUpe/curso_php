@@ -8,7 +8,7 @@
         echo "É verdadeiro! <br>";
     }
 
-    if(5 > 2) {
+    if(5 > 2) { //true
         echo "É verdadeiro 2! <br>";
     }
 

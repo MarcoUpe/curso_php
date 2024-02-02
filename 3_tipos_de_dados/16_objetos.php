@@ -8,4 +8,11 @@
 
     $marco = new Pessoa();
 
+    $marco -> nome = "Marco";
+
+    echo $marco -> nome;
+
+    echo "<br>";
+    $marco -> falar();
+
 ?>

@@ -1,0 +1,18 @@
+<?php
+
+    $soma = 5 + 5;
+    echo $soma . "<br>";
+
+    $substracao = 10 - 2;
+    echo $substracao . "<br>";
+
+    $multiplicacao = 2 * 199;
+    echo $multiplicacao . "<br>";
+
+    $divisao = 123 / 48;
+    echo $divisao . "<br>"; 
+    
+    $op = 5 + (2 / 7) * 8;
+    echo $op;
+
+?>

@@ -9,8 +9,9 @@
     if(is_bool(0)) {
         echo "É um booleadno 2! <br>";
     }
-    else
+    else {
         echo "0 Não é Booleano 2! <br> ";
+    }
 
     if(is_bool(false)) {
         echo "É um booleadno 3! <br>";

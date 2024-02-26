@@ -10,8 +10,9 @@
     if(is_string($num)){
         echo "$num é uma string 2<br>";
     }
-    else
+    else {
         echo "<br>$num não é uma string 2<br>";
+    }
 
     if(is_string("Andrielly")){
         echo "<br>É uma string 3<br>";

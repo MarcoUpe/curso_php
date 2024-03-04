@@ -2,7 +2,7 @@
 
     $x = 0;
 
-    while ($x < 10){
+    while ($x < 10) {
         echo "O x eh $x <br>";
 
         if($x === 5) {
@@ -12,5 +12,6 @@
 
         $x++;
     }
+    echo "Saiu do loop <br>";
 
 ?>

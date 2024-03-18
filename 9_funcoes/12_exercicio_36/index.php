@@ -6,6 +6,15 @@
         array_push($arr, $i);
     }
 
-    print_r($arr);
+    //print_r($arr);
+
+    function arrayMenorQueSete($arr) {
+
+        for ($j = 0; $j < count($arr); $j++ ) {
+            
+        }
+    }
+
+
 
 ?>

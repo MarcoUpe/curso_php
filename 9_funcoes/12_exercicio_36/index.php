@@ -6,15 +6,24 @@
         array_push($arr, $i);
     }
 
-    //print_r($arr);
+    print_r($arr);
+    echo "<br>";
 
-    function arrayMenorQueSete($arr) {
+    function arrayMenorQueSete($array) {
 
-        for ($j = 0; $j < count($arr); $j++ ) {
+        $arrayRetorno = [];
+
+        for ($j = 0; $j < count($array); $j++ ) {
             
+            if ($array[$j] > 7) {
+                array_push($arrayRetorno, $array[$j]);
+            }
         }
+        return $arrayRetorno;
     }
 
+    $novoArray = arrayMenorQueSete($arr);
 
+    print_r($novoArray);
 
 ?>

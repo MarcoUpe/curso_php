@@ -10,7 +10,7 @@
         if($soma > 30) { // se for maior que 30 mostra a mensagem
             echo "O numero $soma eh muito alto <br>";
 
-        } else { // caso não seja maior que trinda só mostra o numero + 6
+        } else { // caso não seja maior que trinta só mostra o numero + 6
             echo "$soma <br>";
         }
     }

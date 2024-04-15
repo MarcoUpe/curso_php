@@ -5,7 +5,7 @@
     print_r($pessoa);
     echo "<br>";
 
-    list($nome, $idade, $profissao, $corDosOlhos) = $pessoa;
+    list($nome, $idade, $profissao, $corDosOlhos) = $pessoa; // insere as variaveis do array para pessoa
 
     echo "$nome <br>";
     echo "$idade <br>";

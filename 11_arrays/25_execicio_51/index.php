@@ -13,8 +13,6 @@
 
 <h2> Ranking </h2>
 
-
-
 <table border="1" align="left">
     <caption> Ranking dos melhores Players! </caption>
     <tr>

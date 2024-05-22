@@ -13,7 +13,7 @@
 
     $marco = new Pessoa;
 
-    $marco -> falar();
+    $marco -> falar(); // definindo função para o objeto criado
     $marco -> falar();
 
     $joao = new Pessoa;

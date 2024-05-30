@@ -3,19 +3,19 @@
     class Humano {
 
         // criacao de variaveis constantes, que não altera valor
-        public const olhos = 2;
-        public const bracos = 2;
-        public const pernas = 2;
+        public const OLHOS = 2;
+        public const BRACOS = 2;
+        public const PERNAS = 2;
 
         function mostrarConstante() {
-            echo self::bracos . "<br>"; // chamando constante dentro da funcao com self ::
+            echo self::BRACOS . "<br>"; // chamando constante dentro da funcao com self ::
         }
     }
 
     $marco = new Humano;
 
     // chamando constante com ::
-    echo $marco::olhos . "<br>"; 
+    echo $marco::OLHOS . "<br>"; 
 
     $marco->mostrarConstante();
 

@@ -18,11 +18,16 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <?php foreach($contacts as $contacts): ?>
+                    <?php foreach($contacts as $contact): ?>
                         <tr>
-                            <td scope="row"> <?php $contacts["id"] ?></td>
-                            <td scope="row"> <?php $contacts["name"] ?></td>
-                            <td scope="row"> <?php $contacts["phone"] ?></td>
+                            <td scope="row"><?php $contact["id"] ?></td>
+                            <td scope="row"><?php $contact["name"] ?></td>
+                            <td scope="row"><?php $contact["phone"] ?></td>
+                            <td class="actions">
+                                <a href="#"><i class="fas fa-eye chech-icon"></i></a>
+                                <a href="#"><i class="far fa-edit edit-icon"></i></a>
+                                <button type="submit"><i class="fas fa-times delet-icon"></i></button>
+                            </td>
                         </tr>
                     <?php endforeach; ?>
                 </tbody>

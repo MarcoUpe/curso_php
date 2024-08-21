@@ -27,7 +27,7 @@
         } else {
 
             // Enviar uma mensagem de erro, dados faltantes
-
+            $message->setMessage("Por favor, preencha todos os campos.", "error", "back");
         }
     
     } else if ($type === "login") {

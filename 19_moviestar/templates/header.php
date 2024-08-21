@@ -1,11 +1,16 @@
 <?php
 
-use function PHPSTORM_META\type;
-
     require_once("globals.php");
     require_once("db.php");
+    require_once("models/Message.php");
 
-    $flashMessage = [];
+    $message = new Message($BASE_URL);
+
+    $flashMessage = $message->getMessage();
+
+    if (!empty($flashMessage["msg"])) {
+        // Limpar a mensagem
+    }
 
 ?>
 

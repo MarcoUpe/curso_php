@@ -18,11 +18,18 @@
             } else {
                 header("Locations: " . $_SERVER["HTTP_REFERER"]);
             }
-
         }
 
         public function getMessage() {
 
+            if(!empty($_SESSION["msg"])) {
+                return [
+                    "msg" => $_SESSION["msg"],
+                    "type" => $_SESSION["type"]
+                ];
+            } else {
+                return false;
+            }
         }
 
         public function clearMessage() {

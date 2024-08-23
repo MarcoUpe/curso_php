@@ -14,9 +14,9 @@
             $_SESSION["type"] = $type;
 
             if($redirect != "back") {
-                header("Locations: $this->url" . $redirect);
+                header("Location: $this->url" . $redirect);
             } else {
-                header("Locations: " . $_SERVER["HTTP_REFERER"]);
+                header("Location: " . $_SERVER["HTTP_REFERER"]);
             }
         }
 
@@ -33,7 +33,8 @@
         }
 
         public function clearMessage() {
-
+            $_SESSION["msg"] = "";
+            $_SESSION["type"] = "";
         }
 
     }

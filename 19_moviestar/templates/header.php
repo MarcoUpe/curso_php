@@ -10,6 +10,7 @@
 
     if (!empty($flashMessage["msg"])) {
         // Limpar a mensagem
+        $message->clearMessage();
     }
 
 ?>

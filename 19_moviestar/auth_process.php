@@ -8,6 +8,8 @@
 
     $message = new Message($BASE_URL);
 
+    $userDAO = new UserDAO($conn, $BASE_URL);
+
     // Resgata o tipo do formulario
     $type = filter_input(INPUT_POST, "type");
 
@@ -23,9 +25,39 @@
         // Verificando dados minimos
         if($name && $lastname && $email && $password) {
 
+            // Verificar se as senhas são iguais
+            if($password === $confirmpassword) {
+
+                // Verificar se o e-mail já existe
+                if($userDAO->findByEmail($email) === false) {
+
+                    $user = new User();
+
+                    // Criação de token e senha
+                    $userToken = $user->generateToken();
+                    $finalPassword = $user->generatePassword($password);
+
+                    $user->name = $name;
+                    $user->lastname = $lastname;
+                    $user->email = $email;
+                    $user->password = $finalPassword;
+                    $user->token = $token;
+
+                    $auth = true;
+
+                    $userDAO->create($user, $auth);
+
+                } else {
+                    // Enviar uma mensagem de erro, usuário já existe
+                    $message->setMessage("Usuário já cadastrado, tente outro e-mail", "error", "back");
+                }
+
+            } else {
+                // Enviar uma mensagem de erro, de senhas não batem
+                $message->setMessage("As senhas não são iguais", "error", "back");
+            }
 
         } else {
-
             // Enviar uma mensagem de erro, dados faltantes
             $message->setMessage("Por favor, preencha todos os campos.", "error", "back");
         }
@@ -33,6 +65,4 @@
     } else if ($type === "login") {
 
     }
-
-
 ?>

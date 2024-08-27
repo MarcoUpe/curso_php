@@ -41,7 +41,7 @@
                     $user->lastname = $lastname;
                     $user->email = $email;
                     $user->password = $finalPassword;
-                    $user->token = $token;
+                    $user->token = $userToken;
 
                     $auth = true;
 

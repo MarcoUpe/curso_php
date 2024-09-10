@@ -57,6 +57,16 @@
 
         public function verifyToken($protect = false) {
 
+            if(!empty($_SESSION["token"])) {
+                
+                // Pega o token da session
+                $token = $_SESSION["token"];
+
+                $user = $this->findByToken($token);
+            } else {
+                return false;
+            }
+
         }
         public function setTokenToSession($token, $redirect = true) {
 

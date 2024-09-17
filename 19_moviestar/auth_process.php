@@ -64,5 +64,16 @@
     
     } else if ($type === "login") {
 
+        $email = filter_input(INPUT_POST, "email");
+        $password = filter_input(INPUT_POST, "password");
+
+        // Tenta Autenticar usuário
+        if($userDAO->authenticateUser($email, $password)) {
+
+        // Redireciona Usuário, caso não autentique
+        } else {
+
+        } 
+
     }
 ?>

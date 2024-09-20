@@ -94,6 +94,9 @@
         }
         public function authenticateUser($email, $password) {
 
+            $user = $this->findByEmail($email) {
+                
+            }
         }
         public function findByEmail($email) {
 

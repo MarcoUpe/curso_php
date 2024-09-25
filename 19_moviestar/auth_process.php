@@ -70,10 +70,15 @@
         // Tenta Autenticar usuário
         if($userDAO->authenticateUser($email, $password)) {
 
+            $message->setMessage("Seja Bem Vindo!", "success", "editprofile.php");
+
         // Redireciona Usuário, caso não autentique
         } else {
 
-        } 
+            $message->setMessage("Usuário e/ou senha incorretos", "error", "back");
 
+        } 
+    } else {
+        $message->setMessage("Informações Invalidas", "error", "index.php");
     }
 ?>

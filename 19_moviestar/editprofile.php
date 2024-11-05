@@ -24,15 +24,6 @@
                             <label for="name">Nome:</label>
                             <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" value="<?= $userData->name ?>">
                         </div>
-                        <div class="form-group">
-                            <label for="lastname">Sobrenome:</label>
-                            <input type="text" class="form-control" id="lastname" name="lasname" placeholder="Digite seu sobrenome" value="<?= $userData->lastname ?>">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">E-mail:</label>
-                            <input type="text" readonly class="form-control disable" id="email" name="email" placeholder="Digite seu e-mail" value="<?= $userData->email ?>">
-                        </div>
-                        <input type="submit" class="btn form-btn" value="Alterar">
                     </div>
                 </div>
             </form>
